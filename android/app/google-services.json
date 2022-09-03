@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "422603959927",
+    "project_id": "ramptht-doctor",
+    "storage_bucket": "ramptht-doctor.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:422603959927:android:847322e12fc4f362816072",
+        "android_client_info": {
+          "package_name": "com.example.ramptht_health"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "422603959927-m4skvhskt51k7slodp08n5dqnbqfghti.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBo-bVoy4plYnRGDJAXjDcFDaNo-UvtLv4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "422603959927-m4skvhskt51k7slodp08n5dqnbqfghti.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

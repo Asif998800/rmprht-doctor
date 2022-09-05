@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ramptht_health/pages/doctor_list.dart';
+import 'package:ramptht_health/pages/all_doctors.dart';
 
 class CategoryCard extends StatelessWidget {
   final iconImagePath;
@@ -16,7 +16,7 @@ class CategoryCard extends StatelessWidget {
         onTap: (() {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => const DoctorList()),
+            MaterialPageRoute(builder: (context) => const AllDoctors()),
           );
         }),
         child: Container(

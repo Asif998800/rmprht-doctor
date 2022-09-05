@@ -24,7 +24,7 @@ class DoctorCard extends StatelessWidget {
         child: Column(
           children: [
             const SizedBox(
-              height: 20,
+              height: 5,
             ),
             //doctor picture
             ClipRRect(

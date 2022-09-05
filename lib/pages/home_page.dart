@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:ramptht_health/util/category_card.dart';
 import 'dart:math' as math;
 
 import '../util/doctor_card.dart';
+import 'all_doctors.dart';
+import 'category/head_category.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    double ph = MediaQuery.of(context).size.height;
+    double pw = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.grey[100],
       body: SafeArea(
@@ -52,14 +55,16 @@ class HomePage extends StatelessWidget {
               ),
             ),
 
-            const SizedBox(
-              height: 25,
+            SizedBox(
+              height: ph * 0.013,
             ),
 
-            //card => how do you feel
+            //card => never lose your prescription
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25),
               child: Container(
+                height: ph * 0.17,
+                width: pw,
                 padding: const EdgeInsets.all(20),
                 decoration: BoxDecoration(
                   color: Colors.deepPurple[300],
@@ -78,31 +83,31 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                     //text
-                    const SizedBox(
-                      width: 20,
+                    SizedBox(
+                      width: ph * 0.02,
                     ),
                     Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Text(
-                            'How do you feel?',
+                            'Never lose Prescription',
                             style: TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          const SizedBox(
-                            height: 12,
+                          SizedBox(
+                            height: ph * 0.012,
                           ),
                           const Text(
-                            'Fill out your madical card now',
+                            'Save all prescription & report',
                             style: TextStyle(
                               fontSize: 14,
                             ),
                           ),
-                          const SizedBox(
-                            height: 12,
+                          SizedBox(
+                            height: ph * 0.012,
                           ),
                           Container(
                             padding: const EdgeInsets.all(12),
@@ -123,20 +128,23 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(
-              height: 25,
+            SizedBox(
+              height: ph * 0.015,
             ),
 
             //search bar
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25),
               child: Container(
+                height: ph * 0.07,
+                width: pw,
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
                   color: Colors.deepPurple[100],
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: const TextField(
+                  readOnly: true,
                   decoration: InputDecoration(
                       border: InputBorder.none,
                       hintText: 'How can we help you',
@@ -144,13 +152,13 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
-
-            const SizedBox(
-              height: 25,
-            ),
-            //horizental listview => Category
             SizedBox(
-              height: 80,
+              height: ph * 0.015,
+            ),
+
+            //horizental listview => Category
+            /*SizedBox(
+              height: 60,
               child:
                   ListView(scrollDirection: Axis.horizontal, children: const [
                 CategoryCard(
@@ -172,37 +180,56 @@ class HomePage extends StatelessWidget {
               ]),
             ),
             const SizedBox(
-              height: 25,
+              height: 10,
             ),
+            */
+
+            //Category
+            const HeadCategory(),
+            SizedBox(
+              height: ph * 0.015,
+            ),
+
             //doctor list
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  Text(
+                children: [
+                  const Text(
                     'Doctor list',
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  Text(
-                    'See all',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
-                      color: Colors.grey,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const AllDoctors()),
+                      );
+                    },
+                    child: const Text(
+                      'See all',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                        color: Colors.grey,
+                      ),
                     ),
                   ),
                 ],
               ),
             ),
 
-            const SizedBox(
-              height: 25,
+            SizedBox(
+              height: ph * 0.02,
             ),
-            Expanded(
+            //doctor card
+            SizedBox(
+              height: ph * 0.28,
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: const [

@@ -46,11 +46,15 @@ class _SplashScreenState extends State<SplashScreen> {
               const SizedBox(
                 height: 20,
               ),
-              const Text(
-                'All specialist in one app',
-                style: TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
+              Container(
+                margin: const EdgeInsets.only(left: 25),
+                alignment: Alignment.bottomLeft,
+                child: const Text(
+                  'All specialist in one app',
+                  style: TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
               const SizedBox(
@@ -76,10 +80,10 @@ class _SplashScreenState extends State<SplashScreen> {
                     ),
                     child: const Center(
                       child: Text(
-                        "Get Started",
+                        "Sign In with Google",
                         style: TextStyle(
                           fontSize: 20,
-                          color: Colors.white70,
+                          color: Colors.white,
                           fontWeight: FontWeight.bold,
                         ),
                       ),

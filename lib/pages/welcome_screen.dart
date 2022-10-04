@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:ramptht_health/pages/home_page.dart';
 import 'package:ramptht_health/pages/onboard_screen.dart';
 
@@ -14,7 +13,7 @@ class WelcomeScreen extends StatelessWidget {
         child: Column(
           children: [
             const Expanded(child: OnBoardScreen()),
-            const Text('Ready to book appointment from home?'),
+            //const Text('Ready to book appointment from home?'),
             const SizedBox(
               height: 20,
             ),

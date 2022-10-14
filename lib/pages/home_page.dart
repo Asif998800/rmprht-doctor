@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:ramptht_health/pages/auth/auth_service.dart';
+import 'package:ramptht_health/pages/vault/addpres.dart';
 import 'dart:math' as math;
 
 import '../util/doctor_card.dart';
@@ -28,14 +30,6 @@ class HomePage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: const [
                       Text(
-                        'Hello',
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold),
-                      ),
-                      SizedBox(
-                        height: 8,
-                      ),
-                      Text(
                         'Asif',
                         style: TextStyle(
                             fontSize: 25, fontWeight: FontWeight.bold),
@@ -43,13 +37,18 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                   //profile pic
-                  Container(
-                    padding: const EdgeInsets.all(12),
-                    decoration: BoxDecoration(
-                      color: Colors.deepPurple[100],
-                      borderRadius: BorderRadius.circular(12),
+                  GestureDetector(
+                    onTap: () {
+                      AuthService().signOut();
+                    },
+                    child: Container(
+                      padding: const EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: Colors.deepPurple[100],
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                      child: const Icon(Icons.person),
                     ),
-                    child: const Icon(Icons.person),
                   ),
                 ],
               ),
@@ -109,15 +108,26 @@ class HomePage extends StatelessWidget {
                           SizedBox(
                             height: ph * 0.012,
                           ),
-                          Container(
-                            padding: const EdgeInsets.all(12),
-                            decoration: BoxDecoration(
-                                color: Colors.deepPurple,
-                                borderRadius: BorderRadius.circular(12)),
-                            child: const Center(
-                              child: Text(
-                                'Get started',
-                                style: TextStyle(color: Colors.white),
+                          GestureDetector(
+                            onTap: (() {
+                              Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const AddPres(),
+                                ),
+                              );
+                            }),
+                            child: Container(
+                              height: ph * 0.050,
+                              padding: const EdgeInsets.all(12),
+                              decoration: BoxDecoration(
+                                  color: Colors.deepPurple,
+                                  borderRadius: BorderRadius.circular(12)),
+                              child: const Center(
+                                child: Text(
+                                  'Get started',
+                                  style: TextStyle(color: Colors.white),
+                                ),
                               ),
                             ),
                           )

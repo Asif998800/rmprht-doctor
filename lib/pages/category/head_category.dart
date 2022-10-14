@@ -43,10 +43,7 @@ class HeadCategory extends StatelessWidget {
                         'lib/icons/broken-bone.png',
                         height: 20,
                       ),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      const Text("otho"),
+                      const Text("ortho"),
                     ],
                   ),
                 ),
@@ -76,9 +73,6 @@ class HeadCategory extends StatelessWidget {
                       Image.asset(
                         'lib/icons/surgeon.png',
                         height: 20,
-                      ),
-                      const SizedBox(
-                        width: 10,
                       ),
                       const Text("physicn"),
                     ],
@@ -140,7 +134,7 @@ class HeadCategory extends StatelessWidget {
                     );
                   },
                   child: Container(
-                    width: 115,
+                    width: pw / 4,
                     padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
                       color: Colors.deepPurple[100],
@@ -152,10 +146,7 @@ class HeadCategory extends StatelessWidget {
                           'lib/icons/kidney.png',
                           height: 20,
                         ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        const Text("Kidney"),
+                        const Text("Kidne"),
                       ],
                     ),
                   ),
@@ -187,7 +178,7 @@ class HeadCategory extends StatelessWidget {
                           height: 20,
                         ),
                         const SizedBox(
-                          width: 10,
+                          width: 5,
                         ),
                         const Text("Eye"),
                       ],
@@ -254,7 +245,7 @@ class HeadCategory extends StatelessWidget {
                     );
                   },
                   child: Container(
-                    width: 115,
+                    width: pw / 4,
                     padding: const EdgeInsets.all(20),
                     decoration: BoxDecoration(
                       color: Colors.deepPurple[100],
@@ -266,10 +257,7 @@ class HeadCategory extends StatelessWidget {
                           'lib/icons/kidney.png',
                           height: 20,
                         ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        const Text("Kidney"),
+                        const Text("Kidne"),
                       ],
                     ),
                   ),
@@ -301,7 +289,7 @@ class HeadCategory extends StatelessWidget {
                           height: 20,
                         ),
                         const SizedBox(
-                          width: 10,
+                          width: 5,
                         ),
                         const Text("Eye"),
                       ],
